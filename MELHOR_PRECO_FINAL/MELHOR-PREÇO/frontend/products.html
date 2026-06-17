@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Melhor Preço</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .products-container {
+            padding: 40px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .products-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .products-header h1 {
+            font-size: 2.5rem;
+            color: var(--verde-escuro);
+        }
+
+        .filter-section {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .filter-label {
+            font-weight: 600;
+            color: var(--verde-escuro);
+            font-size: 1.1rem;
+        }
+
+        .filter-select {
+            padding: 12px 16px;
+            border: 2px solid var(--verde-brilhante);
+            border-radius: 10px;
+            font-size: 1rem;
+            background: white;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: var(--verde-escuro);
+            font-weight: 600;
+        }
+
+        .filter-select:hover {
+            background: #f7f8f6;
+            border-color: var(--verde-escuro);
+        }
+
+        .filter-select:focus {
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(45, 106, 79, 0.15);
+        }
+
+        .clear-filter {
+            padding: 10px 16px;
+            background: var(--laranja-principal);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+
+        .clear-filter:hover {
+            background: var(--laranja-hover);
+        }
+
+        .products-info {
+            margin-bottom: 25px;
+            padding: 15px 20px;
+            background: #f7f8f6;
+            border-left: 4px solid var(--verde-brilhante);
+            border-radius: 8px;
+            font-size: 1.1rem;
+            color: var(--verde-escuro);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            padding: 18px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .product-info {
+            padding: 5px 0;
+        }
+
+        .product-card h3 {
+            font-size: 1.1rem;
+            color: var(--verde-escuro);
+            margin-bottom: 8px;
+            min-height: 45px;
+        }
+
+        .product-category {
+            font-size: 0.85rem;
+            color: #999;
+            margin-bottom: 8px;
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 4px 10px;
+            border-radius: 5px;
+        }
+
+        .product-price {
+            font-size: 1.4rem;
+            color: var(--verde-brilhante);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .product-market {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .btn-details {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background: var(--laranja-principal);
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+
+        .btn-details:hover {
+            background: var(--laranja-hover);
+        }
+
+        #no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+            font-size: 1.2rem;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            color: var(--verde-escuro);
+            text-decoration: none;
+            font-weight: 600;
+            transition: gap 0.2s ease;
+        }
+
+        .back-button:hover {
+            gap: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .products-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .products-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .filter-section {
+                width: 100%;
+            }
+
+            .filter-select {
+                flex: 1;
+                min-width: 150px;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="top-bar">
+        <div class="logo">🛒 MELHOR PREÇO</div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Procurar produtos...">
+            <button id="search-btn">🔍</button>
+            <div class="search-suggestions" id="search-suggestions"></div>
+        </div>
+        <a href="admin.html" class="admin-link" title="Painel Admin">⚙️</a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="categories.html">Categorias</a></li>
+            <li><a href="products.html" class="active">Produtos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="products-container">
+    <a href="index.html" class="back-button">← Voltar</a>
+
+    <div class="products-header">
+        <h1>Todos os Produtos</h1>
+        <div class="filter-section">
+            <label class="filter-label">Filtrar:</label>
+            <select id="category-filter" class="filter-select">
+                <option value="">Todas as categorias</option>
+            </select>
+            <select id="market-filter" class="filter-select">
+                <option value="">Todos os mercados</option>
+            </select>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <input id="min-price" type="number" step="0.01" placeholder="Min R$" style="padding:10px 12px; border-radius:8px; border:1px solid #d4dbd6;">
+                <input id="max-price" type="number" step="0.01" placeholder="Max R$" style="padding:10px 12px; border-radius:8px; border:1px solid #d4dbd6;">
+            </div>
+            <button id="clear-filter" class="clear-filter" style="display: none;">Limpar filtro</button>
+        </div>
+    </div>
+
+    <div class="products-info" id="products-info"></div>
+
+    <div class="product-grid" id="product-grid">
+    </div>
+
+    <div id="no-results">Nenhum produto encontrado.</div>
+</div>
+
+<section class="modal-overlay hidden" id="product-modal">
+    <div class="modal-card">
+        <button class="close-modal" id="close-modal">×</button>
+        <div class="modal-image">
+            <img id="modal-image" src="" alt="Produto">
+        </div>
+        <div class="modal-body">
+            <h2 id="modal-title"></h2>
+            <p class="modal-category" id="modal-category"></p>
+            <p class="modal-price" id="modal-price"></p>
+            <p class="modal-market" id="modal-market"></p>
+            <p class="modal-description" id="modal-description"></p>
+            <button id="close-modal-btn" class="btn-hero">Fechar</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-links">
+        <a href="#">Sobre Nós</a>
+        <a href="#">Ajuda</a>
+        <a href="#">Lojas</a>
+        <a href="#">Contato</a>
+    </div>
+    <p>VISA • MASTERCARD • ELO</p>
+</footer>
+
+<!-- Page toast for global notifications -->
+<div id="page-toast" class="page-toast hidden">
+    <span id="page-toast-msg"></span>
+</div>
+
+<script src="js/products.js"></script>
+</body>
+</html>

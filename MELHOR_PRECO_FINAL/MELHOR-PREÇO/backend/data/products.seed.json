@@ -1,0 +1,138 @@
+[
+  {
+    "name": "Maçã Fuji",
+    "price": "R$ 5,99/kg",
+    "image": "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500",
+    "category": "Frutas",
+    "market": "Pão de Açúcar",
+    "description": "Maçã Fuji fresca e crocante, ideal para lanches e sucos."
+  },
+  {
+    "name": "Pera Williams",
+    "price": "R$ 6,49/kg",
+    "image": "https://gastronomiacarioca.zonasul.com.br/wp-content/uploads/2023/08/pera.png",
+    "category": "Frutas",
+    "market": "Extra",
+    "description": "Pera Williams suculenta, ótima para sobremesas e saladas."
+  },
+  {
+    "name": "Banana Prata",
+    "price": "R$ 4,39/kg",
+    "image": "https://meuamigotemumsitio.com.br/wp-content/uploads/2023/07/nature-plant-fruit-ripe-food-produce-501860-pxhere.com_.jpg",
+    "category": "Frutas",
+    "market": "Assaí",
+    "description": "Banana Prata madura, perfeita para vitaminas e sobremesas."
+  },
+  {
+    "name": "Manga Palmer",
+    "price": "R$ 7,99/kg",
+    "image": "https://ceagesp.gov.br/wp-content/uploads/2024/10/Manga-Palmer-capa-600x467.jpg",
+    "category": "Frutas",
+    "market": "Carrefour",
+    "description": "Manga Palmer doce e suculenta, ideal para sucos e sobremesas."
+  },
+  {
+    "name": "Pão Francês",
+    "price": "R$ 0,99/un",
+    "image": "https://media.istockphoto.com/id/1372632835/pt/foto/mexican-french-bread.jpg?s=612x612&w=0&k=20&c=xRxhnjsd2XiKQ9QhbXMJYgfz_3b9-X4JPt9EnF0a-KQ=",
+    "category": "Padaria",
+    "market": "Carrefour",
+    "description": "Pão francês quentinho e crocante por fora, macio por dentro."
+  },
+  {
+    "name": "Baguete Artesanal",
+    "price": "R$ 7,99",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWCfYK3rQ8JIjfy7Gs3gc3cqoPZRzMHNpRMQ&s",
+    "category": "Padaria",
+    "market": "Mercado Bom Preço",
+    "description": "Baguete artesanal com fermentação lenta, sabor levemente amanteigado."
+  },
+  {
+    "name": "Filé de Frango",
+    "price": "R$ 19,90/kg",
+    "image": "https://swiftbr.vteximg.com.br/arquivos/ids/212498/617520-file-de-peito-frango_inn.jpg?v=638998735684330000",
+    "category": "Carnes",
+    "market": "Extra",
+    "description": "Peito de frango fresco, pronto para grelhar ou assar."
+  },
+  {
+    "name": "Leite Integral 1L",
+    "price": "R$ 4,19",
+    "image": "https://premix.com.br/blog/wp-content/uploads/2022/09/Leite-integral-semi-ou-desnatado-thumbnail.png",
+    "category": "Laticínios",
+    "market": "Pão de Açúcar",
+    "description": "Leite integral fresco, ideal para café, bolos e receitas."
+  },
+  {
+    "name": "Patinho",
+    "price": "R$ 39,00/kg",
+    "image": "https://images.tcdn.com.br/img/img_prod/1321487/patinho_bife_95_1_a099381f322e0f3695208700db6d4734.png",
+    "category": "Carnes",
+    "market": "Dona de casa",
+    "description": "O patinho é um corte traseiro bovino magro, macio, com pouca gordura e sem nervos, muito utilizado no dia a dia para fazer carne moída, bifes rápidos e ensopados."
+  },
+  {
+    "name": "Pobre coitada kkk",
+    "price": "inf",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYyVni6i2iy__TJGm8JSXE7zywzKf3HKe-gg&s",
+    "category": "Geral",
+    "market": "Extra",
+    "description": "fez o L"
+  },
+  {
+    "name": "Picanha",
+    "price": "R$ 83,00/kg",
+    "image": "https://www.44steaks.com/cdn/shop/files/Untitled_design_12.png?v=1730937008&width=4000",
+    "category": "Carnes",
+    "market": "Carrefour",
+    "description": "A picanha é um dos cortes bovinos mais nobres e famosos do Brasil, localizado na parte traseira do boikkkk."
+  },
+  {
+    "name": "Maçã Gala",
+    "price": "R$ 6,00/kg",
+    "image": "https://www.fruta.com.br/wp-content/uploads/2019/10/sh_maca_290834552.jpg",
+    "category": "Frutas",
+    "market": "Extra",
+    "description": "la ele"
+  },
+  {
+    "name": "Mexirica",
+    "price": "R$ 3,00/kg",
+    "image": "https://villalvafrutas.com.br/wp-content/uploads/2018/04/251656151656565115.jpg",
+    "category": "Frutas",
+    "market": "Dona de casa",
+    "description": "nao é bergamota."
+  },
+  {
+    "name": "Pão De Forma",
+    "price": "R$ 8,50",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6ulIa-IR0akn_GXVzuJELJAcsdP_FzR9cOg&s",
+    "category": "Padaria",
+    "market": "Extra",
+    "description": "O pão de forma tradicional é um produto de panificação industrializado, obtido a partir do cozimento de uma massa à base de farinha de trigo."
+  },
+  {
+    "name": "Coca-cola",
+    "price": "R$ 3,00",
+    "image": "https://static.vecteezy.com/ti/fotos-gratis/p2/15656441-ayutthaya-tailandia-25-de-junho-de-2020-classico-da-coca-cola-em-uma-garrafa-de-vidro-e-lata-em-fundo-de-cimento-em-tons-escuros-coca-cola-o-coque-e-o-refrigerante-carbonatado-mais-popular-vendido-em-todo-o-mundo-gratis-foto.jpeg",
+    "category": "Bebidas",
+    "market": "Carrefour",
+    "description": "Cola tradicional e inconfundível."
+  },
+  {
+    "name": "Guaraná Antarctica Zero",
+    "price": "R$ 2,00",
+    "image": "https://gkpb.com.br/wp-content/uploads/2023/12/guarana-antarctica-zero.jpg",
+    "category": "Bebidas",
+    "market": "Extra",
+    "description": "bom em"
+  },
+  {
+    "name": "Queijo Mussarela",
+    "price": "R$ 19,00",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6BbZ0PXawDFTwBs0Ue_UOnEsd9w8cTmJXWg&s",
+    "category": "Laticínios",
+    "market": "Dona de casa",
+    "description": "queijo po"
+  }
+]

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melhor Preço - Supermercado Online</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="top-bar">
+        <div class="logo">🛒 MELHOR PREÇO</div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Procurar produtos...">
+            <button id="search-btn">🔍</button>
+            <div class="search-suggestions" id="search-suggestions"></div>
+        </div>
+        <a href="admin.html" class="admin-link" title="Painel Admin">⚙️</a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Início</a></li>
+            <li><a href="categories.html">Categorias</a></li>
+            <li><a href="products.html">Produtos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>DESCONTOS ESPECIAIS DA SEMANA!</h1>
+        <p>Encontre os melhores preços do mercado com produtos reais e categorias completas.</p>
+        <button id="btn-hero" class="btn-hero">Ver produtos</button>
+    </div>
+</section>
+
+<section class="products" id="products">
+    <h2>OFERTAS DO DIA</h2>
+    <div class="product-grid">
+    </div>
+    <div id="no-results">Nenhum produto encontrado.</div>
+</section>
+
+<section class="modal-overlay hidden" id="product-modal">
+    <div class="modal-card">
+        <button class="close-modal" id="close-modal">×</button>
+        <div class="modal-image">
+            <img id="modal-image" src="" alt="Produto">
+        </div>
+        <div class="modal-body">
+            <h2 id="modal-title"></h2>
+            <p class="modal-category" id="modal-category"></p>
+            <p class="modal-price" id="modal-price"></p>
+            <p class="modal-market" id="modal-market"></p>
+            <p class="modal-description" id="modal-description"></p>
+            <button id="close-modal-btn" class="btn-hero">Fechar</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-links">
+        <a href="#" id="footer-about">Sobre Nós</a>
+        <a href="#" id="footer-help">Ajuda</a>
+        <a href="#" id="footer-stores">Lojas</a>
+        <a href="#" id="footer-contact">Contato</a>
+    </div>
+    <p>VISA • MASTERCARD • ELO</p>
+</footer>
+
+<section class="modal-overlay hidden" id="footer-modal">
+    <div class="modal-card">
+        <button class="close-modal" id="close-footer-modal">×</button>
+        <div class="modal-body">
+            <h2 id="footer-modal-title"></h2>
+            <div id="footer-modal-content"></div>
+            <button id="close-footer-modal-btn" class="btn-hero">Fechar</button>
+        </div>
+    </div>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>

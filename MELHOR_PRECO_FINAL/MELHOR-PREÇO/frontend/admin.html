@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo - Melhor Preço</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .admin-container { padding: 40px 5%; }
+        .form-cadastro { background: #f7f8f6; padding: 30px; border-radius: 20px; border: 1px solid rgba(27,67,50,0.15); margin-bottom: 40px; max-width: 700px; }
+        .form-group { margin-bottom: 18px; display: flex; flex-direction: column; }
+        .form-group label { font-weight: 700; margin-bottom: 8px; color: #214e3f; }
+        .form-group input,
+        .form-group select,
+        .form-group textarea { padding: 12px 14px; border: 1px solid #d4dbd6; border-radius: 14px; outline: none; font-size: 1rem; }
+        .form-group textarea { min-height: 100px; resize: vertical; }
+        .btn-submit { background: var(--verde-brilhante); color: white; border: none; padding: 14px 18px; border-radius: 14px; cursor: pointer; font-weight: bold; width: 100%; }
+        .btn-submit:hover { background: var(--verde-escuro); }
+        .tabela-produtos { width: 100%; border-collapse: collapse; margin-top: 20px; border-radius: 18px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+        .tabela-produtos th, .tabela-produtos td { padding: 18px 16px; }
+        .tabela-produtos th { background: var(--verde-brilhante); color: white; text-transform: uppercase; letter-spacing: 0.04em; }
+        .tabela-produtos td { background: white; border-bottom: 1px solid #edf2f0; }
+        .tabela-produtos tbody tr:hover td { background: #f4f8f4; }
+        .tabela-produtos img { border-radius: 12px; width: 70px; height: 70px; object-fit: cover; border: 1px solid #e7efe8; }
+        .btn-edit, .btn-delete { border: none; padding: 10px 14px; border-radius: 12px; color: white; font-weight: 700; cursor: pointer; transition: 0.2s ease; }
+        .btn-edit { background: #2a8b60; margin-right: 8px; }
+        .btn-delete { background: #d63d3d; }
+        .btn-edit:hover, .btn-delete:hover { transform: translateY(-1px); opacity: 0.95; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="top-bar">
+<!-- Admin modal notification (centered) -->
+<section id="admin-modal" class="modal-overlay hidden" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true">
+        <button class="close-modal" id="admin-modal-close">×</button>
+        <div style="grid-column:1/-1; text-align:center; padding: 10px 20px;">
+            <h3 id="admin-modal-title">Sucesso</h3>
+            <p id="admin-modal-msg" style="margin-top:12px; color:#214e3f;"></p>
+            <button id="admin-modal-ok" class="btn-submit" style="max-width:220px; margin-top:18px;">OK</button>
+        </div>
+    </div>
+</section>
+        <div><a href="index.html" style="color: white; text-decoration: none; font-weight: bold;">← Voltar para o Site</a></div>
+    </div>
+</header>
+
+<div class="admin-container">
+    <h2>Cadastrar / Editar Produto</h2>
+    <form id="product-form" class="form-cadastro">
+        <input type="hidden" id="product-id">
+        <div class="form-group">
+            <label for="name">Nome do Produto:</label>
+            <input type="text" id="name" required placeholder="Ex: Maçã Gala">
+        </div>
+        <div class="form-group">
+            <label for="price">Preço:</label>
+            <input type="text" id="price" name="price" placeholder="Ex: R$ 8,99/kg" required>
+        </div>
+        <div class="form-group">
+            <label for="image">URL da Imagem:</label>
+            <input type="url" id="image" name="image" required placeholder="https://linkdaimagem.com/foto.jpg">
+        </div>
+        <div class="form-group">
+            <label for="category">Categoria:</label>
+            <select id="category" name="category" required>
+                <option value="Frutas">Frutas</option>
+                <option value="Padaria">Padaria</option>
+                <option value="Carnes">Carnes</option>
+                <option value="Laticínios">Laticínios</option>
+                <option value="Bebidas">Bebidas</option>
+                <option value="Geral">Geral</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="market">Rede/Mercado:</label>
+            <input type="text" id="market" name="market" placeholder="Ex: Extra" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Descrição:</label>
+            <textarea id="description" name="description" placeholder="Descrição do produto" required></textarea>
+        </div>
+        <button type="submit" id="btn-salvar" class="btn-submit">Salvar Produto</button>
+    </form>
+
+    <h2>Produtos Cadastrados no SQL</h2>
+    <table class="tabela-produtos">
+        <thead>
+            <tr>
+                <th>Imagem</th>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Categoria</th>
+                <th>Rede</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="admin-table-body">
+        </tbody>
+    </table>
+</div>
+
+<script src="js/admin.js"></script>
+</body>
+</html>
