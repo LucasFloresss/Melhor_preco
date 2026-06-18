@@ -93,7 +93,7 @@ function initializeDatabase() {
                         image TEXT NOT NULL,
                         category VARCHAR(80) NOT NULL DEFAULT 'Geral',
                         market VARCHAR(100) NOT NULL DEFAULT 'Mercado Local',
-                        description TEXT NOT NULL DEFAULT '',
+                        description TEXT NOT NULL,
                         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
                 `;
